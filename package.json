@@ -17,7 +17,7 @@
     "cross-fetch": "^4.0.0",
     "date-fns": "^3.3.1",
     "dotenv": "^16.4.2",
-    "framer-motion": "^11.0.3",
+    "framer-motion": "^11.0.5",
     "graphql": "^16.8.1",
     "next": "14.1.0",
     "react": "^18",
