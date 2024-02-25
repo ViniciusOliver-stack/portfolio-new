@@ -1,5 +1,6 @@
 import { SectionTitle } from '@/app/components/section-title'
 import { ExperienceItem } from './experience-item'
+import { workExperience } from '@/app/utils/info-page'
 
 export function WorkExperience() {
   return (
@@ -15,9 +16,9 @@ export function WorkExperience() {
       </div>
 
       <div className="flex flex-col gap-4">
-        <ExperienceItem />
-        <ExperienceItem />
-        <ExperienceItem />
+        {workExperience.map((experience, index) => (
+          <ExperienceItem key={index} experience={experience} />
+        ))}
       </div>
     </section>
   )
