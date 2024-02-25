@@ -1,9 +1,9 @@
 'use client'
 
-import { TbBrandNextjs } from 'react-icons/tb'
 import { SectionTitle } from '../../../section-title'
 import { KnownTech } from './known-tech'
 import { motion } from 'framer-motion'
+import { techBadge } from '@/app/utils/info-page'
 
 export function KnownTechs() {
   return (
@@ -11,7 +11,7 @@ export function KnownTechs() {
       <SectionTitle title="Conhecimento" subtitle="competências" />
 
       <div className="grid grid-cols-[repeat(auto-fit,minmax(264px,1fr))] gap-3 mt-[60px]">
-        {Array.from({ length: 8 }).map((_, index) => (
+        {techBadge.map((tech, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, x: -100 }}
@@ -21,9 +21,9 @@ export function KnownTechs() {
           >
             <KnownTech
               tech={{
-                icon: <TbBrandNextjs />,
-                startDate: '2021-01-01',
-                name: 'Next.JS',
+                icon: `${tech.icon}`,
+                startDate: `${tech.startDate}`,
+                name: `${tech.name}`,
               }}
             />
           </motion.div>

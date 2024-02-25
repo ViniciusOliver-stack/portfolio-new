@@ -74,11 +74,11 @@ export function ProjectCard() {
         </div>
 
         <Link
-          className="flex items-center gap-2 text-gray-300 text-sm hover:text-emerald-500 transition-colors"
+          className="relative after:absolute after:bg-neutral-400 after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300 flex items-center gap-5 w-fit "
           //   href={`/projects/${project.slug}`}
           href="#"
         >
-          Ver projeto
+          <span>Ver projeto</span>
           <HiArrowNarrowRight />
         </Link>
       </div>
