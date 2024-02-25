@@ -1,10 +1,14 @@
 'use client'
 
+import { NextUIProvider } from '@nextui-org/react'
 import { Header } from './components/header'
-import { Fira_Code } from 'next/font/google'
+import { Fira_Sans } from 'next/font/google'
 import './globals.css'
-
-const firaCode = Fira_Code({ subsets: ['latin'] })
+import { Footer } from './components/footer'
+import { BackToTop } from './components/back-to-top'
+import { ApolloProvider } from '@apollo/client'
+import { client } from './utils/apollo'
+const firaCode = Fira_Sans({ subsets: ['latin'], weight: ['400'] })
 
 export default function RootLayout({
   children,
@@ -14,8 +18,14 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={firaCode.className}>
-        <Header />
-        {children}
+        <ApolloProvider client={client}>
+          <NextUIProvider>
+            <Header />
+            {children}
+            <BackToTop />
+            <Footer />
+          </NextUIProvider>
+        </ApolloProvider>
       </body>
     </html>
   )
