@@ -41,15 +41,6 @@ export const Header = () => {
               <NavItem {...item} key={item.label} />
             ))}
           </nav>
-
-          <div className="flex items-center justify-center">
-            <Link
-              href="/contact"
-              className="px-6 py-2 font-medium text-sm bg-emerald-500 text-white w-fit transition-all shadow-[-3px_-3px_0px_white] hover:shadow-none hover:translate-x-[-3px] hover:translate-y-[-3px]"
-            >
-              Entre em contato
-            </Link>
-          </div>
         </div>
       </div>
     </motion.header>

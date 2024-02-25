@@ -20,8 +20,16 @@ export const NavItem = ({ label, href }: NavItemProps) => {
         isActive && 'text-gray-50',
       )}
     >
-      <span className="text-white">#</span>
-      {label}
+      <span className="text-emerald-400">#</span>
+      <div className="relative overflow-hidden group">
+        <span className="invisible">{label}</span>
+        <span className="text-neutral-400 absolute top-0 left-0 group-hover:-translate-y-full transition-transform ease-in-out duration-500 hover:duration-300">
+          {label}
+        </span>
+        <span className="text-emerald-400 absolute top-0 left-0 translate-y-full group-hover:translate-y-0 transition-transform ease-in-out duration-500 hover:duration-300">
+          {label}
+        </span>
+      </div>
     </Link>
   )
 }
